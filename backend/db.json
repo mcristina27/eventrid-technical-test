@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "08e4",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "dcab",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "3b3b",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "69d5",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "26ca",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "f0dc",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "6a82",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "0e0e",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "a29f",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "6af8",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": "bb99",
+      "email": "usuario@example.com",
+      "password": "contraseña"
+    }
+  ],
+  "memes": [
+    {
+      "id": 1,
+      "name": "Meme 1",
+      "imageUrl": "url_to_image",
+      "likes": 10,
+      "description": "Funny meme",
+      "comments": 5
+    }
+  ],
+  "mognolitos": [
+    {
+      "id": 1,
+      "name": "Meme 1",
+      "imageUrl": "url_to_image",
+      "likes": 10,
+      "description": "Funny meme",
+      "comments": 5
+    }
+  ]
+}
