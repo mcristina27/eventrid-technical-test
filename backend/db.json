@@ -6,57 +6,7 @@
       "password": "contraseña"
     },
     {
-      "id": "08e4",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "dcab",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "3b3b",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "69d5",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "26ca",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "f0dc",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "6a82",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "0e0e",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "a29f",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "6af8",
-      "email": "usuario@example.com",
-      "password": "contraseña"
-    },
-    {
-      "id": "bb99",
+      "id": 1,
       "email": "usuario@example.com",
       "password": "contraseña"
     }
@@ -65,19 +15,241 @@
     {
       "id": 1,
       "name": "Meme 1",
-      "imageUrl": "url_to_image",
+      "imageUrl": "meme1.jpg",
       "likes": 10,
-      "description": "Funny meme",
+      "description": "Cuando abres la cámara frontal por accidente y te das cuenta de que eres un patata.",
       "comments": 5
-    }
-  ],
-  "mognolitos": [
+    },
     {
-      "id": 1,
-      "name": "Meme 1",
-      "imageUrl": "url_to_image",
+      "id": 2,
+      "name": "Meme 2",
+      "imageUrl": "meme2.jpg",
       "likes": 10,
-      "description": "Funny meme",
+      "description": "Yo fingiendo trabajar mientras en realidad estoy viendo memes.",
+      "comments": 5
+    },
+    {
+      "id": 3,
+      "name": "Meme 3",
+      "imageUrl": "meme3.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando alguien dice que no le gustan los memes.",
+      "comments": 5
+    },
+    {
+      "id": 4,
+      "name": "Meme 4",
+      "imageUrl": "meme4.jpg",
+      "likes": 66,
+      "description": "Yo tratando de entender la vida adulta.",
+      "comments": 5
+    },
+    {
+      "id": 5,
+      "name": "Meme 5",
+      "imageUrl": "meme5.jpg",
+      "likes": 190,
+      "description": "Yo después de hacer ejercicio una vez.",
+      "comments": 5
+    },
+    {
+      "id": 6,
+      "name": "Meme 6",
+      "imageUrl": "meme6.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando me dan más responsabilidades en el trabajo.",
+      "comments": 5
+    },
+    {
+      "id": 7,
+      "name": "Meme 7",
+      "imageUrl": "meme7.jpg",
+      "likes": 10,
+      "description": "Mi reacción cuando veo la hora en lunes por la mañana.",
+      "comments": 5
+    },
+    {
+      "id": 8,
+      "name": "Meme 8",
+      "imageUrl": "meme8.jpg",
+      "likes": 10,
+      "description": "Yo tratando de mantenerme despierto en una reunión aburrida.",
+      "comments": 5
+    },
+    {
+      "id": 9,
+      "name": "Meme 9",
+      "imageUrl": "meme9.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando me entero de los chismes.",
+      "comments": 5
+    },
+    {
+      "id": 10,
+      "name": "Meme 10",
+      "imageUrl": "meme10.jpg",
+      "likes": 10,
+      "description": "Yo esperando el fin de semana.",
+      "comments": 5
+    },
+    {
+      "id": 11,
+      "name": "Meme 11",
+      "imageUrl": "meme11.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando veo comida.",
+      "comments": 5
+    },
+    {
+      "id": 12,
+      "name": "Meme 12",
+      "imageUrl": "meme12.png",
+      "likes": 10,
+      "description": "Yo después de una semana sin ir al gimnasio.",
+      "comments": 5
+    },
+    {
+      "id": 13,
+      "name": "Meme 13",
+      "imageUrl": "meme13.jpg",
+      "likes": 10,
+      "description": "Mi reacción cuando me dan un cumplido.",
+      "comments": 5
+    },
+    {
+      "id": 14,
+      "name": "Meme 14",
+      "imageUrl": "meme14.jpg",
+      "likes": 10,
+      "description": "Yo tratando de recordar qué iba a hacer.",
+      "comments": 5
+    },
+    {
+      "id": 15,
+      "name": "Meme 15",
+      "imageUrl": "meme15.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando veo una araña.",
+      "comments": 5
+    },
+    {
+      "id": 16,
+      "name": "Meme 16",
+      "imageUrl": "meme16.png",
+      "likes": 10,
+      "description": "Yo tratando de mantenerme despierto después de comer.",
+      "comments": 5
+    },
+    {
+      "id": 17,
+      "name": "Meme 17",
+      "imageUrl": "meme17.jpg",
+      "likes": 10,
+      "description": "Mi reacción cuando me dan tarea el viernes.",
+      "comments": 5
+    },
+    {
+      "id": 18,
+      "name": "Meme 18",
+      "imageUrl": "meme18.jpg",
+      "likes": 10,
+      "description": "Yo tratando de seguir una receta de cocina.",
+      "comments": 5
+    },
+    {
+      "id": 19,
+      "name": "Meme 19",
+      "imageUrl": "meme19.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando me piden que espere un minuto.",
+      "comments": 5
+    },
+    {
+      "id": 20,
+      "name": "Meme 20",
+      "imageUrl": "meme20.jpg",
+      "likes": 10,
+      "description": "Yo tratando de recordar dónde dejé las llaves.",
+      "comments": 5
+    },
+    {
+      "id": 21,
+      "name": "Meme 21",
+      "imageUrl": "meme21.png",
+      "likes": 10,
+      "description": "Mi cara cuando me entero de un chisme.",
+      "comments": 5
+    },
+    {
+      "id": 22,
+      "name": "Meme 22",
+      "imageUrl": "meme22.jpg",
+      "likes": 10,
+      "description": "Yo tratando de mantener la compostura en una situación incómoda.",
+      "comments": 5
+    },
+    {
+      "id": 23,
+      "name": "Meme 23",
+      "imageUrl": "meme23.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando me dicen que me veo igual que mi papá.",
+      "comments": 5
+    },
+    {
+      "id": 24,
+      "name": "Meme 24",
+      "imageUrl": "meme24.jpg",
+      "likes": 10,
+      "description": "Yo tratando de entender el manual de instrucciones.",
+      "comments": 5
+    },
+    {
+      "id": 25,
+      "name": "Meme 25",
+      "imageUrl": "meme25.jpg",
+      "likes": 60,
+      "description": "Yo tratando de mantenerme despierto en una reunión aburrida.",
+      "comments": 2
+    },
+    {
+      "id": 26,
+      "name": "Meme 26",
+      "imageUrl": "meme26.jpg",
+      "likes": 10,
+      "description": "Yo tratando de hacer una dieta.",
+      "comments": 5
+    },
+    {
+      "id": 27,
+      "name": "Meme 27",
+      "imageUrl": "meme27.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando me quedo sin batería en el celular.",
+      "comments": 5
+    },
+    {
+      "id": 28,
+      "name": "Meme 28",
+      "imageUrl": "meme28.jpg",
+      "likes": 10,
+      "description": "Yo tratando de entender el final de una película complicada.",
+      "comments": 5
+    },
+    {
+      "id": 29,
+      "name": "Meme 29",
+      "imageUrl": "meme29.jpg",
+      "likes": 10,
+      "description": "Mi cara cuando alguien me despierta temprano en mi día libre.",
+      "comments": 5
+    },
+    {
+      "id": 30,
+      "name": "Meme 30",
+      "imageUrl": "meme30.jpg",
+      "likes": 10,
+      "description": "Yo tratando de hacer ejercicio regularmente.",
       "comments": 5
     }
   ]
