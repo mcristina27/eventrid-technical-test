@@ -52,7 +52,9 @@ Password: admin
 ```
 *Se protegieron las rutas con la autenticación *
 - Desplegar listado de memes, considerando imagen, nombre, cantidad de likes.
+        ```javascript
 		Después del login, agregué también paginación pero por algún extraño motivo no devuelve el page en la api pero si el limit así que decidí comentarlo.
+        ```
 - Vista para visualizar meme en detalle el cual además de los datos del punto anterior debe considerar desplegar descripción y cantidad de comentarios
 		Cuando se da click a una imagen de los cards se abre un modal con el detalle.
 - Habilitar formulario para crear un meme considerando los campos mencionados en la sección de backend (para la imagen basta con una url, no es necesario subir una imagen como tal).
