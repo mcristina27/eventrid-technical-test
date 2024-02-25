@@ -39,7 +39,7 @@ npx json-server --watch backend/db.json --port 3005
 ## Characteristics
 
 - **Login:** Permite a los usuarios autenticarse y poder visualizar la información de la pagina. 
-- **Listado de memes: **Muestra un listado de memes. imagen, descripcion, cantidad de likes y comentarios.
+- **Listado de memes:** Muestra un listado de memes. imagen, descripcion, cantidad de likes y comentarios.
 - **Creacion de memes:** Permite la creacion de memes de los usuarios, insertando el nombre, imagen y descripción.
 
 ## Challenges
