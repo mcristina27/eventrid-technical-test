@@ -1,4 +1,4 @@
-import {  Button, Card, Col, Modal, Row } from "react-bootstrap";
+import {  Button, Card, Col, Row } from "react-bootstrap";
 import { meme } from "../interfaces/Meme";
 import { AiFillLike } from "react-icons/ai";
 import { FaCommentAlt } from "react-icons/fa";

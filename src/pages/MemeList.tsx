@@ -1,29 +1,17 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import {
-  Badge,
-  Button,
-  Card,
-  CardGroup,
   Col,
   Container,
-  Form,
-  ListGroup,
-  Nav,
-  Navbar,
   Row,
 } from "react-bootstrap";
 import { meme } from "../interfaces/Meme";
 import "./main.css";
-import FabButton from "../components/FabButton";
-import { colors } from "../theme/colors";
 import ModalAddMeme from "../components/ModalAddMeme";
-import ModalShowMeme from "../components/ModalShowMeme";
-import PaginationMeme from "../components/PaginationMeme";
 import axios from "axios";
 
 const MemeList = () => {
   const [memeList, setMemeList] = useState([]);
-  const [itemsPerPage, setItemsPerPage] = useState(32);
+  const [itemsPerPage] = useState(32);
   const [pageNumber] = useState(1);
   const CardMeme = lazy(() => import("../components/CardMeme"));
 

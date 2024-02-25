@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
-import { redirect, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
-  Card,
   Col,
   Container,
   Form,
   FormControl,
-  Image,
   InputGroup,
   Row,
-  Stack,
 } from "react-bootstrap";
 import "./main.css";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { LazyLoadImage } from "react-lazy-load-image-component";
