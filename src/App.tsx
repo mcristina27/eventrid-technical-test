@@ -7,6 +7,8 @@ import { Button } from 'react-bootstrap';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './pages/Login';
 import MemeList from './pages/MemeList';
+import { Toaster } from 'react-hot-toast';
+import RequireAuth from './pages/RequireAuth';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,11 +18,13 @@ function App() {
     },
     {
       path: "/meme-list",
-      element: <MemeList />,
+      element: <RequireAuth><MemeList /></RequireAuth>,
     },
   ]);
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

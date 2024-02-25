@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { redirect, useNavigate } from "react-router-dom";
 import {
   Button,
+  Card,
   Col,
   Container,
   Form,
+  FormControl,
   Image,
   InputGroup,
   Row,
@@ -14,266 +16,137 @@ import axios from "axios";
 import "./main.css";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
+import { useFormik } from "formik";
+import * as Yup from 'yup';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const { data } = await axios.get(
-        `http://localhost:3005/users?email=${username}&password=${password}`
-      );
-      if (data.length > 0) {
-        navigate("meme-list");
-      } else {
-        alert("Credenciales inválidas");
+
+
+  const validationSchema = Yup.object({
+    username: Yup.string().email("El campo debe ser un email  ").required('El campo es obligatorio'),
+    password: Yup.string().required('El campo es obligatorio'),
+  });
+  const formik = useFormik({
+    initialValues: {
+      username: '',
+      password: '',
+    },
+    validationSchema,
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      try {
+        const { data } = await axios.get(
+          `http://localhost:3005/users?email=${values.username}&password=${values.password}`
+        );
+        const search = data.filter((user: { email: string, password: string }) => user.email === values.username && user.password === values.password)
+        if (search.length > 0) {
+          toast.success('Bienvenido')
+          localStorage.setItem('auth', 'true')
+          navigate("meme-list");
+        } else {
+          toast.error('Credenciales inválidas')
+        }
+      } catch (error) {
+        toast.error('Oops algo ocurrió')
       }
-    } catch (error) {
-      console.error("Error en la autenticación", error);
+      setSubmitting(false)
+      resetForm()
     }
-  };
+  });
 
   return (
     <Container fluid>
-      <Row className="vh-100 justify-content-center align-items-center">
-        <Col xs={12} sm={6}>
-          <div className="px-4 p-md-6  p-sm-4">
-            <Form
-              className="justify-content-center align-items-center"
-              onSubmit={handleLogin}
-            >
-              <Col className="p-0" xs={12}>
-                <h4 className="text-center mb-4" style={{ color: "#333" }}>
-                  Login
-                </h4>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>Correo electrónico</Form.Label>
-                  <InputGroup size="sm" className="mb-3">
-                    <Form.Control
-                      required
-                      type="email"
-                      placeholder="name@example.com"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                    />
-                  </InputGroup>
-                </Form.Group>
+      <Row className="min-vh-100 align-items-center justify-content-center">
 
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>Contraseña</Form.Label>
-                  <InputGroup size="sm" className="mb-3">
-                    <Form.Control
-                      required
-                      type={showPassword ? "text" : "password"}
-                      placeholder="************"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <InputGroup.Text className="py-0 px-2">
-                      <Button
-                        type="button"
-                        onClick={() => setShowPassword(!showPassword)}
-                        className="btn-password roundedCircle  p-0"
-                      >
-                        {showPassword ? (
-                          <FaEyeSlash
-                            className="icon-eye"
-                            width={14}
-                            height={14}
-                          />
-                        ) : (
-                          <FaEye className="icon-eye" width={14} height={14} />
-                        )}
-                      </Button>
-                    </InputGroup.Text>
-                  </InputGroup>
-                </Form.Group>
-                <div className="d-flex justify-content-center">
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    style={{
-                      boxShadow: "4 4px 8px rgba(0,0,0,0.1)",
-                      marginTop: "10%",
-                    }}
-                    className="col-md-10 justify-content-center align-items-center"
-                  >
-                    Login
-                  </Button>
-                </div>
-              </Col>
-            </Form>
-          </div>
+        <Col md={6} className="d-none d-md-flex align-items-center justify-content-center">
+          <Image
+            src={require("../assets/images/homer.png")}
+            alt="login"
+            style={{ maxWidth: '100%', maxHeight: '100%' }}
+          />
         </Col>
-        <Col xs={12} sm={6}>
-          <Stack className="p-5 content-img justify-content-center align-items-center">
-            <Image
-              src={require("../assets/images/gatoLloron.jpg")}
-              alt="placeholder"
-              className="gatoLloron"
-            />
-          </Stack>
+        <Col md={6} className="d-flex align-items-center justify-content-center">
+          <Form className="form-login" onSubmit={formik.handleSubmit}
+          >
+            <Row>
+              <h4 className="text-center mb-4" style={{ color: "#333" }}>
+                Bienvenido a Dev's Memes
+              </h4>
+            </Row>
+            <Form.Group
+              className="mb-3"
+            >
+              <Form.Label className="font-weight-bold">Correo electrónico</Form.Label>
+              <InputGroup size="sm" className="mb-3">
+                <FormControl
+                  placeholder="Username"
+                  id="username"
+                  type="email"
+                  {...formik.getFieldProps('username')}
+                  isValid={!formik.touched['username'] ? false : true}
+                  isInvalid={!!formik.errors.username && formik.touched.username}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {formik.errors.username}
+                </Form.Control.Feedback>
+              </InputGroup>
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3"
+            >
+              <Form.Label className="font-weight-bold">Contraseña</Form.Label>
+              <InputGroup size="sm" className="mb-3">
+                <Form.Control
+                  placeholder="************"
+                  id="password"
+                  type={showPassword ? "text" : "password"}
+                  {...formik.getFieldProps('password')}
+                  isValid={!formik.touched['password'] ? false : true}
+                  isInvalid={!!formik.errors.password && formik.touched.password}
+                />
+                <InputGroup.Text className="py-0 px-2">
+                  <Button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="btn-password roundedCircle  p-0"
+                  >
+                    {showPassword ? (
+                      <FaEyeSlash
+                        className="icon-eye"
+                        width={14}
+                        height={14}
+                      />
+                    ) : (
+                      <FaEye className="icon-eye" width={14} height={14} />
+                    )}
+                  </Button>
+                </InputGroup.Text>
+                <Form.Control.Feedback type="invalid">
+                  {formik.errors.password}
+                </Form.Control.Feedback>
+              </InputGroup>
+              <div className="d-flex justify-content-center">
+                <Button
+                  variant="primary"
+                  type="submit"
+                  style={{
+                    boxShadow: "4 4px 8px rgba(0,0,0,0.1)",
+                    marginTop: "10%",
+                  }}
+                  className="col-md-10 justify-content-center align-items-center"
+                >
+                  Ingresar
+                </Button>
+              </div>
+            </Form.Group>
+
+          </Form>
         </Col>
       </Row>
     </Container>
-    // <Container fluid>
-    //     <Row>
-    //         <Col className="bg-primary  p-0" xs={6}>
-    //             <Container
-    //                 className="vh-100 col-md-6 d-flex justify-content-center align-items-center"
-    //             >
-    //                 <Form
-    //                     className="box-form justify-content-center align-items-center"
-    //                     onSubmit={handleLogin}
-    //                 >
-    //                     <Col className=" p-0" xs={12}>
-    //                         <h4
-    //                             className="text-center mb-4" style={{ color: '#333' }}
-    //                         >
-    //                             Login
-    //                         </h4>
-    //                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    //                             <Form.Label>Email address</Form.Label>
-    //                             <Form.Control type="email" placeholder="name@example.com" />
-    //                         </Form.Group>
-    //                         <Form.Group controlId="formBasicPassword">
-    //                             <Form.Label>Password</Form.Label>
-    //                             <InputGroup>
-    //                                 <FormControl
-    //                                     type={showPassword ? 'text' : 'password'}
-    //                                     placeholder="Password"
-    //                                     aria-label="Password"
-    //                                     aria-describedby="basic-addon2"
-    //                                 />
-    //                                 <InputGroup size="sm" className="mb-3">
-
-    //                                     <Form.Control
-    //                                         aria-label="Small"
-    //                                         aria-describedby="inputGroup-sizing-sm"
-    //                                     />
-    //                                     <InputGroup.Text id="inputGroup-sizing-sm">
-    //                                         <Button onClick={toggleShowPassword}>
-    //                                             {showPassword ? <FaEye /> : <FaEyeSlash />}
-    //                                         </Button>
-    //                                     </InputGroup.Text>
-    //                                 </InputGroup>
-    //                             </InputGroup>
-    //                         </Form.Group>
-    //                         <div className="d-flex justify-content-center" >
-    //                             <Button
-    //                                 variant="primary"
-    //                                 type="submit"
-    //                                 style={{
-    //                                     boxShadow: '4 4px 8px rgba(0,0,0,0.1)',
-    //                                     marginTop: "10%"
-    //                                 }}
-    //                                 className="col-md-10 justify-content-center align-items-center"
-    //                             >
-    //                                 Login
-    //                             </Button>
-    //                         </div>
-    //                     </Col>
-
-    //                 </Form>
-    //             </Container>
-    //         </Col>
-    //         <Col className="bg-secondary  align-self-center text-center" xs={6}>
-    //             <img className='img-bg' src={require("../assets/images/gatoLloron.jpg")} alt="" />
-
-    //         </Col>
-    //     </Row>
-    // </Container>
-    // <div className='row d-flex justify-content-center align-items-center'>
-    //     <div className='vh-100 col-md-6 d-flex justify-content-center align-items-center'>
-
-    //         <img className='img-bg' src={require("../assets/images/gatoLloron.jpg")} alt="" />
-    //     </div>
-
-    //     <div  className="d-none d-md-block col-md-6 d-flex justify-content-center align-items-center">F
-
-    //         <div className='box-right-content'>
-
-    //             <div className='box'>
-    //                 adsasdsaijdasdsa
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
-    // <div
-    //     className="row d-flex justify-content-center align-items-center"
-    //     style={{ backgroundColor: colors.bg, minHeight: '100vh' }} >
-
-    //     {/* <div
-    //         className="col-md-6 d-flex box-form"
-    //     > */}
-    //         <div className='box-form-c w-100 col-md-6'>
-    //             <Form
-    //                 className="col-md-10 justify-content-center align-items-center"
-    //                 onSubmit={handleLogin}
-    //             >
-
-    //                 <h4
-    //                     className="text-center mb-4" style={{ color: '#333' }}
-    //                 >
-    //                     Login
-    //                 </h4>
-    //                 <FloatingLabel
-    //                     controlId="floatingInput"
-    //                     label="Email address"
-    //                     style={{
-    //                         fontSize: '12px',
-    //                         color: '#555'
-    //                     }}
-    //                 >
-    //                     <Form.Control
-    //                         size={'sm'}
-    //                         type="email"
-    //                         placeholder="name@example.com" />
-
-    //                 </FloatingLabel>
-    //                 <FloatingLabel
-    //                     controlId="floatingPassword"
-    //                     label="Password"
-    //                     style={{
-    //                         marginTop: "5%",
-    //                         fontSize: '1rem',
-    //                         color: '#555'
-    //                     }}>
-    //                     <Form.Control
-    //                         type="password"
-    //                         placeholder="Password" />
-    //                 </FloatingLabel>
-    //                 <div className="d-flex justify-content-center" >
-    //                     <Button
-    //                         variant="primary"
-    //                         type="submit"
-    //                         style={{
-    //                             boxShadow: '4 4px 8px rgba(0,0,0,0.1)',
-    //                             marginTop: "10%"
-    //                         }}
-    //                         className="col-md-10 justify-content-center align-items-center"
-    //                     >
-    //                         Login
-    //                     </Button>
-    //                 </div>
-    //             </Form>
-    //         {/* </div> */}
-    //     </div>
-    //     <div
-    //         className="d-none d-md-block col-md-6 d-flex text-center p-5 content-img justify-content-center align-items-center"
-    //     >
-    //         <img src={require("../assets/images/gatoLloron.jpg")} alt="placeholder" className="gatoLloron" />
-    //     </div>
-    // </div >
   );
 };
 

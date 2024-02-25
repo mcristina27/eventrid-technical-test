@@ -1,8 +1,8 @@
 export interface meme {
-  id: number;
+  id?: number;
   name: string;
   imageUrl: string;
-  likes: number;
+  likes?: number;
   description: string;
-  comments: number;
+  comments?: string[]
 }

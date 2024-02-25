@@ -1,256 +1,372 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "usuario@example.com",
-      "password": "contraseña"
+      "id": "1",
+      "email": "admin@example.com",
+      "password": "admin"
     },
     {
-      "id": 1,
+      "id": "1",
       "email": "usuario@example.com",
       "password": "contraseña"
     }
   ],
   "memes": [
     {
-      "id": 1,
-      "name": "Meme 1",
-      "imageUrl": "meme1.jpg",
+      "id": "1",
+      "name": "Selfie Sorpresa 😳",
+      "imageUrl": "https://i.imgur.com/Nb3WjPw.jpeg",
       "likes": 10,
-      "description": "Cuando abres la cámara frontal por accidente y te das cuenta de que eres un patata.",
-      "comments": 5
+      "description": "Cuando abres la cámara frontal por accidente y te das cuenta. 😳",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 2,
-      "name": "Meme 2",
-      "imageUrl": "meme2.jpg",
+      "id": "2",
+      "name": "Trabajo Encubierto 🕵️‍♂️",
+      "imageUrl": "https://i.imgur.com/mHwi4Z2.jpeg",
       "likes": 10,
-      "description": "Yo fingiendo trabajar mientras en realidad estoy viendo memes.",
-      "comments": 5
+      "description": "Yo fingiendo trabajar mientras en realidad estoy viendo memes. 🕵️‍♂️",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 3,
-      "name": "Meme 3",
-      "imageUrl": "meme3.jpg",
+      "id": "3",
+      "name": "Incredulidad Meme 😲",
+      "imageUrl": "https://i.imgur.com/qeYyGJK.jpeg",
       "likes": 10,
-      "description": "Mi cara cuando alguien dice que no le gustan los memes.",
-      "comments": 5
+      "description": "Mi cara cuando alguien dice que no le gustan los memes. 😲",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 4,
-      "name": "Meme 4",
-      "imageUrl": "meme4.jpg",
+      "id": "4",
+      "name": "Adulting Es Difícil 🤯",
+      "imageUrl": "https://i.imgur.com/1ynvyw1.jpeg",
       "likes": 66,
-      "description": "Yo tratando de entender la vida adulta.",
-      "comments": 5
+      "description": "Yo tratando de entender la vida adulta que merezco. 🤯",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 5,
-      "name": "Meme 5",
-      "imageUrl": "meme5.jpg",
+      "id": "5",
+      "name": "Ejercicio Un Día 💪",
+      "imageUrl": "https://i.imgur.com/H8Ctg3O.jpeg",
       "likes": 190,
-      "description": "Yo después de hacer ejercicio una vez.",
-      "comments": 5
+      "description": "Yo después de hacer ejercicio una vez. 💪",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 6,
-      "name": "Meme 6",
-      "imageUrl": "meme6.jpg",
+      "id": "6",
+      "name": "Responsabilidad Extra 😑",
+      "imageUrl": "https://i.imgur.com/HggRlO9.jpeg",
       "likes": 10,
-      "description": "Mi cara cuando me dan más responsabilidades en el trabajo.",
-      "comments": 5
+      "description": "Mi cara cuando me dan más responsabilidades en el trabajo. 😑",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 7,
-      "name": "Meme 7",
-      "imageUrl": "meme7.jpg",
+      "id": "7",
+      "name": "Lunes por la Mañana ⏰",
+      "imageUrl": "https://i.imgur.com/9xhQHyE.jpeg",
       "likes": 10,
-      "description": "Mi reacción cuando veo la hora en lunes por la mañana.",
-      "comments": 5
+      "description": "Mi reacción cuando veo la hora en lunes por la mañana. ⏰",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 8,
-      "name": "Meme 8",
-      "imageUrl": "meme8.jpg",
+      "id": "8",
+      "name": "Reunión Aburrida 😴",
+      "imageUrl": "https://i.imgur.com/VshI3gP.png",
       "likes": 10,
-      "description": "Yo tratando de mantenerme despierto en una reunión aburrida.",
-      "comments": 5
+      "description": "Yo tratando de mantenerme despierto en una reunión aburrida. 😴",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 9,
-      "name": "Meme 9",
-      "imageUrl": "meme9.jpg",
+      "id": "9",
+      "name": "Chisme Caliente 🍿",
+      "imageUrl": "https://i.imgur.com/Y9edVWj.jpeg",
       "likes": 10,
-      "description": "Mi cara cuando me entero de los chismes.",
-      "comments": 5
+      "description": "Mi cara cuando me entero de los chismes. 🍿",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 10,
-      "name": "Meme 10",
-      "imageUrl": "meme10.jpg",
+      "id": "10",
+      "name": "Esperando el Finde ⌛",
+      "imageUrl": "https://i.imgur.com/qd63F5z.jpeg",
       "likes": 10,
-      "description": "Yo esperando el fin de semana.",
-      "comments": 5
+      "description": "Yo esperando el fin de semana. ⌛",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 11,
-      "name": "Meme 11",
-      "imageUrl": "meme11.jpg",
+      "id": "11",
+      "name": "Amor por la Comida 😍",
+      "imageUrl": "https://i.imgur.com/ocfqW5O.jpeg",
       "likes": 10,
-      "description": "Mi cara cuando veo comida.",
-      "comments": 5
+      "description": "Mi cara cuando veo comida. 😍",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 12,
-      "name": "Meme 12",
-      "imageUrl": "meme12.png",
+      "id": "12",
+      "name": "Sin Gimnasio 🛌",
+      "imageUrl": "https://i.imgur.com/xQkc5rD.jpeg",
       "likes": 10,
-      "description": "Yo después de una semana sin ir al gimnasio.",
-      "comments": 5
+      "description": "Yo después de una semana sin ir al gimnasio. 🛌",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 13,
-      "name": "Meme 13",
-      "imageUrl": "meme13.jpg",
+      "id": "13",
+      "name": "Cuando te Halagan 😊",
+      "imageUrl": "https://i.imgur.com/eMrCbBz.jpeg",
       "likes": 10,
-      "description": "Mi reacción cuando me dan un cumplido.",
-      "comments": 5
+      "description": "Mi reacción cuando me dan un cumplido. 😊",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 14,
-      "name": "Meme 14",
-      "imageUrl": "meme14.jpg",
+      "id": "14",
+      "name": "Memoria a Corto Plazo 🧐",
+      "imageUrl": "https://i.imgur.com/hBZozxV.png",
       "likes": 10,
-      "description": "Yo tratando de recordar qué iba a hacer.",
-      "comments": 5
+      "description": "Yo tratando de recordar qué iba a hacer. 🧐",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 15,
-      "name": "Meme 15",
-      "imageUrl": "meme15.jpg",
+      "id": "15",
+      "name": "Aracnofobia 😱",
+      "imageUrl": "https://i.imgur.com/mMQrAu4.jpeg",
       "likes": 10,
-      "description": "Mi cara cuando veo una araña.",
-      "comments": 5
+      "description": "Mi cara cuando veo una araña. 😱",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 16,
-      "name": "Meme 16",
-      "imageUrl": "meme16.png",
+      "id": "16",
+      "name": "Siesta Post-Comida 😪",
+      "imageUrl": "https://i.imgur.com/sC5gUwP.jpg",
       "likes": 10,
-      "description": "Yo tratando de mantenerme despierto después de comer.",
-      "comments": 5
+      "description": "Yo tratando de mantenerme despierto después de comer. 😪",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 17,
-      "name": "Meme 17",
-      "imageUrl": "meme17.jpg",
+      "id": "17",
+      "name": "Tarea de Viernes 😖",
+      "imageUrl": "https://i.imgur.com/Kxkl3PZ.jpg",
       "likes": 10,
-      "description": "Mi reacción cuando me dan tarea el viernes.",
-      "comments": 5
+      "description": "Mi reacción cuando me dan tarea el viernes. 😖",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 18,
-      "name": "Meme 18",
-      "imageUrl": "meme18.jpg",
+      "id": "18",
+      "name": "Chef Novato 🍳",
+      "imageUrl": "https://i.imgur.com/vZM2BTh.jpg",
       "likes": 10,
-      "description": "Yo tratando de seguir una receta de cocina.",
-      "comments": 5
+      "description": "Yo tratando de seguir una receta de cocina. 🍳",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 19,
-      "name": "Meme 19",
-      "imageUrl": "meme19.jpg",
+      "id": "19",
+      "name": "Espera Impaciente ⏳",
+      "imageUrl": "https://i.imgur.com/Q0WygGp.jpg",
       "likes": 10,
-      "description": "Mi cara cuando me piden que espere un minuto.",
-      "comments": 5
+      "description": "Mi cara cuando me piden que espere un minuto. ⏳",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 20,
-      "name": "Meme 20",
-      "imageUrl": "meme20.jpg",
+      "id": "20",
+      "name": "Búsqueda de Llaves 🔍",
+      "imageUrl": "https://i.imgur.com/WZNND87.jpg",
       "likes": 10,
-      "description": "Yo tratando de recordar dónde dejé las llaves.",
-      "comments": 5
+      "description": "Yo tratando de recordar dónde dejé las llaves. 🔍",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 21,
-      "name": "Meme 21",
-      "imageUrl": "meme21.png",
+      "id": "21",
+      "name": "Chisme Parte 2 🕵️‍♀️",
+      "imageUrl": "https://i.imgur.com/gtJFQNG.jpg",
       "likes": 10,
-      "description": "Mi cara cuando me entero de un chisme.",
-      "comments": 5
+      "description": "Mi cara cuando me entero de un chisme. 🕵️‍♀️",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 22,
-      "name": "Meme 22",
-      "imageUrl": "meme22.jpg",
+      "id": "22",
+      "name": "Compostura Máxima 😬",
+      "imageUrl": "https://i.imgur.com/aauVEXR.jpg",
       "likes": 10,
-      "description": "Yo tratando de mantener la compostura en una situación incómoda.",
-      "comments": 5
+      "description": "Yo tratando de mantener la compostura en una situación incómoda. 😬",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 23,
-      "name": "Meme 23",
-      "imageUrl": "meme23.jpg",
+      "id": "23",
+      "name": "Papá Clone 😂",
+      "imageUrl": "https://i.imgur.com/cIXKw7Y.jpg",
       "likes": 10,
-      "description": "Mi cara cuando me dicen que me veo igual que mi papá.",
-      "comments": 5
+      "description": "Mi cara cuando me dicen que me veo igual que mi papá. 😂",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 24,
-      "name": "Meme 24",
-      "imageUrl": "meme24.jpg",
+      "id": "24",
+      "name": "Manual Incomprensible 📚",
+      "imageUrl": "https://i.imgur.com/stGGUCD.jpg",
       "likes": 10,
-      "description": "Yo tratando de entender el manual de instrucciones.",
-      "comments": 5
+      "description": "Yo tratando de entender el manual de instrucciones. 📚",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 25,
-      "name": "Meme 25",
-      "imageUrl": "meme25.jpg",
+      "id": "25",
+      "name": "Reunión Doble Zzz 😴",
+      "imageUrl": "https://i.imgur.com/SFutGkK.jpg",
       "likes": 60,
-      "description": "Yo tratando de mantenerme despierto en una reunión aburrida.",
+      "description": "Yo tratando de mantenerme despierto en una reunión aburrida. 😴",
       "comments": 2
     },
     {
-      "id": 26,
-      "name": "Meme 26",
-      "imageUrl": "meme26.jpg",
+      "id": "26",
+      "name": "Desafío Dieta 🥗",
+      "imageUrl": "https://i.imgur.com/weCRDR4.jpg",
       "likes": 10,
-      "description": "Yo tratando de hacer una dieta.",
-      "comments": 5
+      "description": "Yo tratando de hacer una dieta. 🥗",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 27,
-      "name": "Meme 27",
-      "imageUrl": "meme27.jpg",
+      "id": "27",
+      "name": "Celular Sin Batería 🔋",
+      "imageUrl": "https://i.imgur.com/msSoHj3.jpg",
       "likes": 10,
-      "description": "Mi cara cuando me quedo sin batería en el celular.",
-      "comments": 5
+      "description": "Mi cara cuando me quedo sin batería en el celular. 🔋",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 28,
-      "name": "Meme 28",
-      "imageUrl": "meme28.jpg",
-      "likes": 10,
-      "description": "Yo tratando de entender el final de una película complicada.",
-      "comments": 5
+      "id": "28",
+      "name": "Final Confuso 🤔",
+      "imageUrl": "https://i.imgur.com/My07FJg.jpg",
+      "likes": 21,
+      "description": "Yo tratando de entender el final de una película complicada. 🤔",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 29,
-      "name": "Meme 29",
-      "imageUrl": "meme29.jpg",
-      "likes": 10,
-      "description": "Mi cara cuando alguien me despierta temprano en mi día libre.",
-      "comments": 5
+      "id": "29",
+      "name": "Despertar Temprano 😡",
+      "imageUrl": "https://i.imgur.com/6JIKvke.jpg",
+      "likes": 17,
+      "description": "Mi cara cuando alguien me despierta temprano en mi día libre. 😡",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     },
     {
-      "id": 30,
-      "name": "Meme 30",
-      "imageUrl": "meme30.jpg",
-      "likes": 10,
-      "description": "Yo tratando de hacer ejercicio regularmente.",
-      "comments": 5
+      "id": "30",
+      "name": "Rutina de Ejercicio 🏋️",
+      "imageUrl": "https://i.imgur.com/ZTDq1K6.jpg",
+      "likes": 102,
+      "description": "Yo tratando de hacer ejercicio regularmente. 🏋️",
+      "comments": [
+        "¡Esa cara es impagable! 😂",
+        "Me pasa todo el tiempo.",
+        "¡La mejor selfie sorpresa que he visto!"
+      ]
     }
   ]
 }
