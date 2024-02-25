@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Col, Modal, Row } from "react-bootstrap";
+import {  Button, Card, Col, Modal, Row } from "react-bootstrap";
 import { meme } from "../interfaces/Meme";
 import { AiFillLike } from "react-icons/ai";
 import { FaCommentAlt } from "react-icons/fa";
@@ -9,30 +9,36 @@ import ModalShowMeme from "./ModalShowMeme";
 
 interface memeProps {
   meme: meme;
-  getMemeList: () => void
+  getMemeList: () => void;
 }
 const CardMeme: React.FC<memeProps> = ({ meme, getMemeList }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showMemeDetails, setShowMemeDetails] = useState(false);
-  const [comments, setComments] = useState<string[]>([]);
-
 
   const addLike = (meme: meme) => {
     try {
-      axios.put(`http://localhost:3005/memes/${meme.id}`, { ...meme, likes: meme.likes as number + 1 }).catch((e) => console.error(e))
-      getMemeList()
+      axios
+        .put(`http://localhost:3005/memes/${meme.id}`, {
+          ...meme,
+          likes: (meme.likes as number) + 1,
+        })
+        .catch((e) => console.error(e));
+      getMemeList();
+    } catch (error) {
+      console.error(error);
     }
-    catch (error) {
-      console.error(error)
-    }
-  }
+  };
   return (
     <>
-      <ModalShowMeme meme={meme} showModal={showMemeDetails} setShowModal={setShowMemeDetails} />
+      <ModalShowMeme
+        meme={meme}
+        showModal={showMemeDetails}
+        setShowModal={setShowMemeDetails}
+      />
       <Card
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`rounded-meme w-100 ${isHovered ? 'card-hover' : ''}`}
+        className={`rounded-meme w-100 ${isHovered ? "card-hover" : ""}`}
       >
         <Card.Img
           onClick={() => setShowMemeDetails(true)}

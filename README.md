@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Dev´s Memes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto consiste en una aplicación web desarrollada en React para la visualización y gestión de memes. La aplicación permite a los usuarios autenticarse, ver memes, agregar nuevos memes, ver detalles de cada meme y ver los comentarios de cada meme.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- React
+- React Router
+- React Bootstrap
+- TypeScript
+- Formik
 
-### `npm start`
+## Installation 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clona el repositorio:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```javascript
+git clone https://github.com/mcristina27/eventrid-technical-test
+```
 
-### `npm test`
+2. Instala las dependencias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```javascript
+cd eventrid-technical-test
+```
+```javascript
+npm install
+```
+3. Desplegar en dev:
 
-### `npm run build`
+```javascript
+npm start
+```
+2. Run Backend
+```javascript
+npx json-server --watch backend/db.json --port 3005
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Characteristics
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Login:** Permite a los usuarios autenticarse y poder visualizar la información de la pagina. 
+- **Listado de memes: **Muestra un listado de memes. imagen, descripcion, cantidad de likes y comentarios.
+- **Creacion de memes:** Permite la creacion de memes de los usuarios, insertando el nombre, imagen y descripción.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Challenges
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Login o mecanismo de seguridad para autentificarse y poder hacer uso del servicio.
+****Usuario logger:****
+**Email: **admin@gmail.com
+**Password: ** admin
+*Se protegieron las rutas con la autenticación *
+- Desplegar listado de memes, considerando imagen, nombre, cantidad de likes.
+		Después del login, agregué también paginación pero por algún extraño motivo no devuelve el page en la api pero si el limit así que decidí comentarlo.
+- Vista para visualizar meme en detalle el cual además de los datos del punto anterior debe considerar desplegar descripción y cantidad de comentarios
+		Cuando se da click a una imagen de los cards se abre un modal con el detalle.
+- Habilitar formulario para crear un meme considerando los campos mencionados en la sección de backend (para la imagen basta con una url, no es necesario subir una imagen como tal).
+		Utilicé un modal con un formulario para registrar los memes.
+- Técnica de optimización implementada
+		Code-Splitting con React.lazy y Suspense para renderizar la iteración de los cards memes.
+		Lazy load para la imagen del Login
+- El diseño se deja a libertad, la evaluación estará enfocada a lo funcional más que a lo estético.
+		Aquí utilicé memes de desarrolladores, recomiendo revisar todos están bien graciosos jaja
+- Implementación de pruebas unitarias a componentes
+		Utilice  test-library para hacer una pequeña prueba con jest.
