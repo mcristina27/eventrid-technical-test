@@ -46,9 +46,9 @@ npx json-server --watch backend/db.json --port 3005
 
 - Login o mecanismo de seguridad para autentificarse y poder hacer uso del servicio.
 ```javascript
-****Usuario logger:****
-**Email: **admin@gmail.com
-**Password: ** admin
+Usuario logger:
+Email: admin@gmail.com
+Password: admin
 ```
 *Se protegieron las rutas con la autenticación *
 - Desplegar listado de memes, considerando imagen, nombre, cantidad de likes.
